@@ -4,7 +4,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: rgb(3, 36, 34);
+    background-color: rgb(185, 160, 142);
 }
 .toolboxContainer{
     height: 5rem;
@@ -29,7 +29,7 @@ body{
     align-items: center;
 }
 .actionButtonContainer{
-    background-color: rgb(254, 80, 80);
+    background-color: rgb(200, 78, 78);
     height: 3rem;
     width: 10rem;
     margin-left: 5rem;
@@ -65,7 +65,7 @@ body{
 .dustbin{
     font-size: 1.5rem;
 }
-.add:hover{
+.add:hover, .dustbin:hover{
     color: yellow;
     cursor:pointer;
 }
@@ -79,6 +79,7 @@ body{
     background-color: rgb(149, 163, 159);
     display: flex;
     display: none;
+    transition: ease-in all 2s;
     border: 0.5vh solid black;
 }
 
@@ -132,6 +133,11 @@ body{
     padding-left: 10px;
     padding-top: 2px;
     border-radius: 5px ;
+    display: flex;
+}
+.ticketId .dustbin{
+    margin-left: 11vw;
+    font-size: 1.1rem;
 }
 .ticketDiv{
     display: flex;
