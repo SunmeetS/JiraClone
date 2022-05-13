@@ -6,6 +6,8 @@ let footer = document.querySelector('.footer');
 let deleteBtn = document.querySelector(".dustbin")
 let deletee = false
 let ticketCont1;
+let eachPriorityColor = 'black'
+
 
 deleteBtn.addEventListener('click',function(){
     deletee =! deletee
@@ -22,25 +24,32 @@ addButton.addEventListener("click",function(){
     
 })
 
+let priorityColor = document.querySelectorAll('.priorityColor')
+for(let i = 0; i<priorityColor.length; i++){
+    priorityColor[i].addEventListener('click',function(){        for(let j = 0; j<priorityColor.length; j++){
+            priorityColor[j].classList.remove('active')
+        }
+        priorityColor[i].classList.add('active')
+        eachPriorityColor = priorityColor[i].classList[1]
+    })
+}
 
 
 taskEditor.addEventListener("keydown",function(e){
     let key = e.key;
     if(key == "Enter"){
-        createTicket(textArea.value);
+        createTicket(eachPriorityColor,textArea.value);
         textArea.value = ""
         taskEditor.style.display = "none"
         addTaskEditor = !addTaskEditor
     }
 })
 
-
-
-function createTicket(value){
+function createTicket(eachPriorityColor,value){
  
     let ticketCont = document.createElement("div")
     ticketCont.setAttribute('class','ticketCont')
-    ticketCont.innerHTML = `<div class="ticketColour"></div>
+    ticketCont.innerHTML = `<div class="ticketColour ${eachPriorityColor}"></div>
                             <div class = "ticketDiv">
                                 <div class="ticketId"> #abc12 
                                     <div class="dustbin">
@@ -60,11 +69,15 @@ function createTicket(value){
             else{
                 ticketCont1[i].style.boxShadow = 'none'
             }
-        })
-        
+        })        
     }
 
-}
-if(deletee){
+    let ticketContainerDelete = document.querySelectorAll(".ticketId .dustbin")
+    for(let i = 0; i<ticketContainerDelete.length; i++){
+        ticketContainerDelete[i].addEventListener('click',function(){
+            if(deletee)
+                ticketCont1[i].remove()
+        })
+    }
     
 }

@@ -11,6 +11,8 @@ body{
     background-color: rgb(7, 36, 46);
     display: flex;
     align-items: center;
+    position:sticky;
+    top: px;
 }
 .footer{
     margin-top: 2rem;   
@@ -135,6 +137,15 @@ body{
     border-radius: 5px ;
     display: flex;
 }
+.active{
+    border: 5px solid rgb(243, 0, 0);
+}
+.priorityColor:hover{
+    cursor: pointer
+}
+.priorityColor:hover{
+    border: 2px solid rgb(243, 0, 0);
+}
 .ticketId .dustbin{
     margin-left: 11vw;
     font-size: 1.1rem;
@@ -142,6 +153,10 @@ body{
 .ticketDiv{
     display: flex;
     justify-content: center;
+}
+.ticketColour{
+    border-radius: 1rem;
+    margin: 2px;
 }
 .taskArea{
     height: calc(100% - 1rem - 1.5rem) ;
