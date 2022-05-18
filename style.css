@@ -4,11 +4,11 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: rgb(185, 160, 142);
+    background-color: RGB(18, 19, 22)
 }
 .toolboxContainer{
     height: 5rem;
-    background-color: rgb(7, 36, 46);
+    background-color: #27293f;
     display: flex;
     align-items: center;
     position:sticky;
@@ -22,7 +22,7 @@ body{
     gap: 2rem; 
 }
 .toolboxPriorityContainer{
-    background-color: darkolivegreen;
+    background-color: #181a1d;
     height: 3rem;
     width: 18rem;
     margin-left: 25%;
@@ -31,7 +31,7 @@ body{
     align-items: center;
 }
 .actionButtonContainer{
-    background-color: rgb(200, 78, 78);
+    background-color: #fadc17;
     height: 3rem;
     width: 10rem;
     margin-left: 5rem;
@@ -49,7 +49,7 @@ body{
 
 }
 .pink{
-    background-color: lightpink;
+    background-color: pink;
 }
 .blue{
     background-color:lightblue
@@ -57,18 +57,18 @@ body{
 .green{
     background-color:lightgreen
 }
-.black{
-    background-color:black
+.white{
+    background-color:white
 }
 
 .add{
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
 }
 .dustbin{
     font-size: 1.5rem;
 }
 .add:hover, .dustbin:hover{
-    color: yellow;
+    color: red;
     cursor:pointer;
 }
 
@@ -78,11 +78,11 @@ body{
     top: 20vh;
     height: 50vh;
     width: 50vw;
-    background-color: rgb(149, 163, 159);
+    background-color: #604fc7;
     display: flex;
     display: none;
     transition: ease-in all 2s;
-    border: 0.5vh solid black;
+    border: 0.5vh solid white;
 }
 
 .textArea{
@@ -90,13 +90,17 @@ body{
     outline: none;
     resize: none;
     font-size: 2rem;
-    color: black;
-    background-color: lightyellow;
+    color: white;
+    background-color: #fdd641;
     height: 100%;
     width: 75%;
+    background-color: #604fc7;
     padding: 2rem;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
+}
+textarea::placeholder{
+    color: white;
 }
 
 .colorSection{
@@ -115,7 +119,7 @@ body{
 }
 
 .ticketCont{
-    background-color: rgb(221, 230, 173);
+    background-color: #4c14a0;
     height: 10rem;
     width: 15rem;
     border-radius: 10px;
@@ -126,12 +130,11 @@ body{
     height: 1rem;
 }
 .ticketId{
-    height: 1.5rem;
-    width: 90%;
-    background-color: brown;
-    color: white;
+    margin-top: 2px;
+    color: #c7c8dd;
+    height: 0.9rem;
+    width: 100%;
     font-weight: bold;
-    background-position: center;
     padding-left: 10px;
     padding-top: 2px;
     border-radius: 5px ;
@@ -147,7 +150,7 @@ body{
     border: 2px solid rgb(243, 0, 0);
 }
 .ticketId .dustbin{
-    margin-left: 11vw;
+    margin-left: 13vw;
     font-size: 1.1rem;
 }
 .ticketDiv{
@@ -162,4 +165,5 @@ body{
     height: calc(100% - 1rem - 1.5rem) ;
     padding: 10px;
     font-size: 1.25rem;
+    color: #c7c8dd;
 }
