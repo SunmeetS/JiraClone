@@ -46,8 +46,8 @@ body{
     align-items: center;
     height: 1.5rem;
     width: 3rem;
-
 }
+
 .pink{
     background-color: pink;
 }
@@ -150,7 +150,7 @@ textarea::placeholder{
     border: 2px solid rgb(243, 0, 0);
 }
 .ticketId .dustbin{
-    margin-left: 13vw;
+    margin-left: 8.6rem;
     font-size: 1.1rem;
 }
 .ticketDiv{
@@ -166,4 +166,19 @@ textarea::placeholder{
     padding: 10px;
     font-size: 1.25rem;
     color: #c7c8dd;
+    word-wrap: break-word; 
+}
+
+.lock-unlock{
+    color: white;
+    font-size: 1.2rem;
+    margin-top: -1.7rem;
+    margin-left: 13.2rem;
+}
+.lock-unlock:hover{
+    cursor: pointer;
+    color: red;
+}
+.taskArea{
+    outline: none;
 }
